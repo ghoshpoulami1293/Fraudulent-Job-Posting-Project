@@ -24,7 +24,7 @@ The same pre-processing and vectorizing technique applied during training in the
 
 Model Evaluation:
 Sample output using the dataset:
-F1 Score: 0.693467
+F1 Score: 0.7693467
 Runtime: 58.3 seconds
 
-The F1 score ranges from 0.69 - 0.78 marking an average accuracy of approximately 74%
+The F1 score ranges from 0.74 - 0.8 marking an average accuracy of approximately 76%
