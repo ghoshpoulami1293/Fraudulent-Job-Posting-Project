@@ -1,42 +1,30 @@
 # Fraudulent-Job-Posting-Project
-Predict whether a job posting is real or fake
+Project Title: Job Posting Authenticity Prediction
 
-Goal:
-Train a model to predict whether a job posting is real or fake on the provided dataset.
+Description:
 
-Solution Implemented: 
-Leveraged the SGDClassifier in unsupervised learning to determine job posting authenticity. 
-Applied stochastic gradient descent optimization and NLP techniques to predict whether a job posting is genuine or fake.
+The project aims to train a model to predict whether a job posting is real or fake using the provided dataset. The solution implemented leverages the Stochastic Gradient Descent (SGD) Classifier , an unsupervised learning algorith to determine job posting authenticity. Stochastic gradient descent optimization and natural language processing (NLP) techniques are applied to achieve this goal.
 
+Restrictions Set:
+Only packages allowed for installation are scikit-learn, gensim, pandas, and numpy.
 
-Restrictions set : 
-    Can only install packages: scikit-learn, gensim, pandas, numpy
+Data Preprocessing:
+The data in the dataset is cleaned by removing stop words, punctuations, special characters, and digits. Additionally, the text is converted to lowercase. Missing values in the input training data (X_trainingData) are filled with empty strings. Specifically, the pattern "#NAME?" is removed. New columns are created by concatenating values from the text features.
 
+Model Training:
+Model Used: Stochastic Gradient Descent Classifier with balanced class weights
+TF-IDF vectorization is performed on the combined text data and combined with numerical features.
+Missing values are imputed using the mean.
+A pipeline is constructed, including a preprocessor and the defined model.
+Hyperparameter tuning is performed using GridSearchCV with Stratified K-fold cross-validation.
+The best model found is accessed and set as the final model.
 
-Data Preprocessing
-The data in the dataset  is cleaned. 
-    Stop words, punctuations, special characters and digits are removed and text is converted to lowercase.
-    Missing values in the input training data (X_trainingData) are filled with empty strings.
-    Specifically removed the pattern #NAME\?
-    New columns are created by concatenating values from the text features
-
-Model Training
-    Model used : Stochastic Gradient Descent Classifier with balanced class weights 
-    Performed TF-IDF vectorization on the combined text data and combines it with numerical features.
-    Imputed missing values using the mean.
-    Constructed a pipeline, including a preprocessor and the defined model.
-    Perform hyperparameter tuning using GridSearchCV with Stratified K-fold cross-validation.
-    Access the best model found and set it as the final model
-
-Prediction
-    Apply the same pre-processing and vectorizing technique in the predict method (as applied while training in the fit method) , and predict using fitted model , whether a job is fake or not.
+Prediction:
+The same pre-processing and vectorizing technique applied during training in the fit method are applied in the predict method. The fitted model is then used to predict whether a job is fake or not.
 
 Model Evaluation:
-    Sample output using dataset:
-        F1 score: 0.693467
-        Runtime: 58.3 seconds
+Sample output using the dataset:
+F1 Score: 0.693467
+Runtime: 58.3 seconds
 
-
-
-
-
+The F1 score ranges from 0.69 - 0.78 marking an average accuracy of approximately 74%
