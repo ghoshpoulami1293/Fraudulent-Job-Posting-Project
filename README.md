@@ -3,7 +3,7 @@ Project Title: Job Posting Authenticity Prediction
 
 Description:
 
-The project aims to train a model to predict whether a job posting is real or fake using the provided dataset. The solution implemented leverages the Stochastic Gradient Descent (SGD) Classifier , an unsupervised learning algorith to determine job posting authenticity. Stochastic gradient descent optimization and natural language processing (NLP) techniques are applied to achieve this goal.
+The project aims to train a model to predict whether a job posting is real or fake using the provided dataset. The solution implemented leverages Stochastic Gradient Descent (SGD) Classifier, which preprocesses and vectorizes textual data with TF-IDF and numerical features. The model undergoes hyperparameter tuning via GridSearchCV for optimal performance.
 
 Restrictions Set:
 Only packages allowed for installation are scikit-learn, gensim, pandas, and numpy.
